@@ -1,4 +1,6 @@
 # 業務フロー
+
+## ログイン
 ```uml
 @startuml
 opt 未登録
@@ -36,6 +38,7 @@ end
 @enduml
 ```
 
+## 商品検索・購入
 ```uml
 @startuml
 ユーザー -> Webサーバー : 商品検索
