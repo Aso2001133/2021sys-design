@@ -25,13 +25,22 @@ package "ECサイト" as target_system {
         del_flag
         reg_date
     }
-    entity "購入テーブル" as 2 <d_purchase> <<T,MASTER_MARK_COLOR>> {
+    entity "購入テーブル" as purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>> {
         + order_id [PK]
         --
         customer_code [FK]
         purchase_date
         total_price
     }
+    entity "購入詳細テーブル" as 2 <d_purchase_datail> <<T,TRANSACTION_MARK_COLOR>> {
+        + order_id [PK]
+        + detail_id
+        --
+        item_code [FK]
+        price
+        num
+    }
+    
   }
 @enduml
 ```
