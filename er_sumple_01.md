@@ -40,7 +40,23 @@ package "ECサイト" as target_system {
         price
         num
     }
-    
+    entity "商品マスタ" as items <m_items> <<M,MASTER_MARK_COLOR>> {
+        + item_code [PK]
+        --
+        item_name
+        price
+        category_id [FK]
+        imagge
+        detail
+        del_flag
+        reg_date
+    }
+    entity "カテゴリマスタ" as category <m_category> <<M,MASTER_MARK_COLOR>> {
+        + categry_id [PK]
+        --
+        name
+        reg_date
+    }
   }
 @enduml
 ```
