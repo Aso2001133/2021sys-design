@@ -25,17 +25,12 @@ package "ECサイト" as target_system {
         del_flag
         reg_date
     }
-    
-    entity "顧客マス" as customer <m_customers> <<M,MASTER_MARK_COLOR>> {
-        + customer_code [PK]
+    entity "購入テーブル" as customer <d_purchase> <<T,MASTER_MARK_COLOR>> {
+        + order_id [PK]
         --
-        pass
-        name
-        address
-        tel
-        mail
-        del_flag
-        reg_date
+        customer_code [FK]
+        purchase_date
+        total_price
     }
   }
 @enduml
