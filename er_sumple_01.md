@@ -58,12 +58,11 @@ package "ECサイト" as target_system {
         reg_date
     }
   }
-  customer       |o-ri-o{     order 
-
-order          ||-ri-|{     order_detail 
-
-order_detail    }-do-||     items 
-
-items          }o-le-||     category 
+@enduml
+@startuml
+  customer  |o-ri-o{ order 
+order  ||-ri-|{  order_detail 
+order_detail  }-do-|| items 
+items }o-le-|| category 
 @enduml
 ```
