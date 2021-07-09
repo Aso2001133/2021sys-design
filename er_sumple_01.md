@@ -34,7 +34,7 @@ package "ECサイト" as target_system {
     }
     entity "購入詳細テーブル" as 2 <d_purchase_datail> <<T,TRANSACTION_MARK_COLOR>> {
         + order_id [PK]
-        + detail_id
+        + detail_id [PK]
         --
         item_code [FK]
         price
