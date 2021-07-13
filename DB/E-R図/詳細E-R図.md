@@ -1,7 +1,7 @@
 ```puml
 @startuml
 entity "学生" {
-  name:int
+  学籍番号
 }
 @enduml
 ```
